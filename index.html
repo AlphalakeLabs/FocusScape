@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Scape</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome -->
+    <link rel="icon" type="image/jpeg" href="Fevicon.jpg"> <!-- Favicon -->
+</head>
+<body>
+
+    <div class="slideshow-container">
+        <div class="logo-container">
+            <img src="Fevicon.jpg" alt="Logo" class="logo">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/image1.jpg" class="fullscreen">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/image2.jpg" class="fullscreen">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/image3.jpg" class="fullscreen">
+        </div>
+    </div>
+
+    <div class="controls-container">
+        <div class="top-controls">
+            <button id="skip-back-button"><i class="fas fa-backward"></i></button>
+            <button id="play-pause-button"><i class="fas fa-play"></i></button>
+            <button id="skip-next-button"><i class="fas fa-forward"></i></button>
+            <button id="fullscreen-button"><i class="fas fa-expand"></i></button>
+        </div>
+        <div class="bottom-controls">
+            <!-- Optional: Add volume control or other features -->
+        </div>
+    </div>
+
+    <audio id="background-music" loop>
+        <source src="music/music1.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

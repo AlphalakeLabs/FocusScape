@@ -1,0 +1,109 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f3f3;
+}
+
+/* Logo container */
+.logo-container {
+    position: absolute;
+    top: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+    z-index: 1001; /* Ensure logo is above slideshow */
+}
+
+/* Logo styling */
+.logo {
+    width: 80px; /* Adjust width as needed */
+    height: auto;
+}
+
+.slideshow-container {
+    height: 100%;
+    position: relative;
+}
+
+.mySlides {
+    display: none;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 2s ease-in-out; /* Smoother and slower transition */
+}
+
+.mySlides.show {
+    display: block;
+    opacity: 1;
+}
+
+.fullscreen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.controls-container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000; /* Ensure controls are above other content */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity change */
+}
+
+.top-controls {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1001; /* Ensure above other controls */
+}
+
+.bottom-controls {
+    position: fixed;
+    bottom: 50px;
+    right: 10px;
+    z-index: 1001; /* Ensure above other controls */
+}
+
+button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px; /* Add space between buttons */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Add hover effect */
+}
+
+button:focus {
+    outline: none; /* Remove default focus outline */
+}
+
+/* Style for Font Awesome icons */
+button i {
+    font-size: 1.5em; /* Adjust icon size */
+    color: black; /* Set icon color */
+}
+
+/* Specific styles for skip back and skip next buttons */
+#skip-back-button,
+#skip-next-button {
+    margin-left: 0; /* Remove margin to align with play/pause button */
+    color: black; /* Icon color */
+    background-color: transparent; /* Transparent background */
+    position: relative; /* Positioning for stacking */
+}
+
+#skip-back-button:hover,
+#skip-next-button:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Hover effect */
+}
+
+#skip-back-button:focus,
+#skip-next-button:focus {
+    outline: none; /* Remove default focus outline */
+}
