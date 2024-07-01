@@ -94,3 +94,43 @@ function skipBack() {
 playPauseButton.addEventListener('click', togglePlayPause);
 skipNextButton.addEventListener('click', skipNext);
 skipBackButton.addEventListener('click', skipBack);
+
+// Stopwatch functionality
+let timer;
+let isTimerRunning = false;
+let elapsedSeconds = 0;
+
+const timerDisplay = document.getElementById("timer");
+const playPauseBtn = document.getElementById("playPauseBtn");
+const resetBtn = document.getElementById("resetBtn");
+
+function formatTime(seconds) {
+    const hrs = Math.floor(seconds / 3600);
+    const mins = Math.floor((seconds % 3600) / 60);
+    const secs = seconds % 60;
+    return `${hrs.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+}
+
+function updateTimer() {
+    elapsedSeconds++;
+    timerDisplay.textContent = formatTime(elapsedSeconds);
+}
+
+playPauseBtn.addEventListener("click", function() {
+    if (isTimerRunning) {
+        clearInterval(timer);
+        playPauseBtn.textContent = "Play";
+    } else {
+        timer = setInterval(updateTimer, 1000);
+        playPauseBtn.textContent = "Pause";
+    }
+    isTimerRunning = !isTimerRunning;
+});
+
+resetBtn.addEventListener("click", function() {
+    clearInterval(timer);
+    elapsedSeconds = 0;
+    timerDisplay.textContent = "00:00:00";
+    playPauseBtn.textContent = "Play";
+    isTimerRunning = false;
+});
