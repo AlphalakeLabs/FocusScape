@@ -107,3 +107,39 @@ button i {
 #skip-next-button:focus {
     outline: none; /* Remove default focus outline */
 }
+
+/* Stopwatch Styles */
+.stopwatch-container {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1001; /* Ensure above other controls */
+    background: rgba(252, 252, 252, 0.409);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#timer {
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.stopwatch-controls button {
+    font-size: 12px;
+    padding: 5px 10px;
+    margin: 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#playPauseBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#resetBtn {
+    background-color: #f44336;
+    color: white;
+}
